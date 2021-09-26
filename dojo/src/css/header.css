@@ -1,0 +1,32 @@
+#container {
+  background-color: blue;
+  height: 20vh;
+}
+
+.div1 {
+  background-color: rgb(172, 121, 219);
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+
+.div2 {
+  background-color: rgb(211, 218, 122);
+  height: 60%;
+}
+
+/* ////
+////////
+//////////// */
+/* tablet media section */
+@media only screen and (min-width: 426px) {
+}
+/* laptop media section */
+@media only screen and (min-width: 769px) {
+}
+
+/* large media section */
+@media only screen and (min-width: 1441px) {
+}

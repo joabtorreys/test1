@@ -1,28 +1,32 @@
-import './app.css'
-
-import Home from './components/home'
-
+import Header from "./components/header";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Home from "./components/home";
+import About from "./components/about";
+import Contact from "./components/contact";
+import Notfound from "./components/notfound";
 // after imports
 
 function App() {
   return (
+    <Router>
+      <Header />
+      {/* this is the header section */}
 
-  <div className="main">
- <div id="container">
-
-<div className="div1">hello</div>
-<div className="div2">
-  
-  
-  
-  <a href="#">home</a>
-  <a href="#">home</a>
-  <a href="#">home</a>
-  </div>
-
- </div>
- <Home/>
- </div>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/contact">
+          <Contact />
+        </Route>
+        <Route path="*">
+          <Notfound />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
